@@ -15,6 +15,8 @@ import mano.Uzduotis_12.uzduotis12;
 import mano.Uzduotis_13.uzduotis13;
 import mano.Uzduotis_14.uzduotis14;
 import mano.Uzduotis_15.uzduotis15;
+import mano.Uzduotis_16.uzduotis16;
+import mano.Uzduotis_17.uzduotis17;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -36,6 +38,8 @@ public class Main {
     public static final int ACTION_13 = 13;
     public static final int ACTION_14 = 14;
     public static final int ACTION_15 = 15;
+    public static final int ACTION_16 = 16;
+    public static final int ACTION_17 = 17;
     public static final int ACTION_END = 0;
 
 
@@ -63,6 +67,8 @@ public class Main {
         System.out.println(ACTION_13 + " – Isrinkti maziausia masyve esanti skaiciu ");
         System.out.println(ACTION_14 + " – Apsukti ivesta masyva ");
         System.out.println(ACTION_15 + " – Is zodzio isskirti \"a\" raides ");
+        System.out.println(ACTION_16 + " – Is zodzio isskirti \"ab\" radziu kombinacijas ");
+        System.out.println(ACTION_17 + " – Tikrinti ar zodis yra polindromas\"); ");
         System.out.println("Jei norite nutraukti programa, spauskite: " + ACTION_END);
         System.out.println("================================================");
     }
@@ -121,6 +127,12 @@ public class Main {
                     break;
                 case ACTION_15:
                     new uzduotis15();
+                    break;
+                case ACTION_16:
+                    new uzduotis16();
+                    break;
+                case ACTION_17:
+                    new uzduotis17();
                     break;
             }
         }
