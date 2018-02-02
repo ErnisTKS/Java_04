@@ -17,6 +17,8 @@ import mano.Uzduotis_14.uzduotis14;
 import mano.Uzduotis_15.uzduotis15;
 import mano.Uzduotis_16.uzduotis16;
 import mano.Uzduotis_17.uzduotis17;
+import mano.Uzduotis_30.uzduotis30;
+import mano.Uzduotis_31.uzduotis31;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -40,6 +42,8 @@ public class Main {
     public static final int ACTION_15 = 15;
     public static final int ACTION_16 = 16;
     public static final int ACTION_17 = 17;
+    public static final int ACTION_30 = 30;
+    public static final int ACTION_31 = 31;
     public static final int ACTION_END = 0;
 
 
@@ -49,7 +53,7 @@ public class Main {
     }
 
 
-    public  void Pasirinkimai() {
+    public void Pasirinkimai() {
         System.out.println("================================================");
         System.out.println("Iveskite uzduoties numeri: ");
         System.out.println(ACTION_1 + " – Ar skaicius lyginis ar nelyginis ");
@@ -68,12 +72,14 @@ public class Main {
         System.out.println(ACTION_14 + " – Apsukti ivesta masyva ");
         System.out.println(ACTION_15 + " – Is zodzio isskirti \"a\" raides ");
         System.out.println(ACTION_16 + " – Is zodzio isskirti \"ab\" radziu kombinacijas ");
-        System.out.println(ACTION_17 + " – Tikrinti ar zodis yra polindromas\"); ");
+        System.out.println(ACTION_17 + " – Tikrinti ar zodis yra polindromas");
+        System.out.println(ACTION_30 + " – Masyvo rikiavimas didejimo tvarka");
+        System.out.println(ACTION_31 + " – Masyvo rikiavimas mazejimo tvarka");
         System.out.println("Jei norite nutraukti programa, spauskite: " + ACTION_END);
         System.out.println("================================================");
     }
 
-    public  void vykdytiProgramaBeGalo() {
+    public void vykdytiProgramaBeGalo() {
         boolean kartoti = true;
         Scanner sc = new Scanner(System.in);
         while (kartoti == true) {
@@ -133,6 +139,12 @@ public class Main {
                     break;
                 case ACTION_17:
                     new uzduotis17();
+                    break;
+                case ACTION_30:
+                    new uzduotis30();
+                    break;
+                case ACTION_31:
+                    new uzduotis31();
                     break;
             }
         }
