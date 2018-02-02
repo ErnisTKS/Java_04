@@ -10,7 +10,7 @@ public class uzduotis31 {
         int a = sc.nextInt();
         int[] mas = new int[a];
         for (int i = 0; i < a; i++) {
-            System.out.println("Iveskite " + i + " vietoje esanti skaiciu: ");
+            System.out.println("Iveskite " + (i+1) + " vietoje esanti skaiciu: ");
             mas[i] = sc.nextInt();
         }
         Rikiavimas(mas);
@@ -18,7 +18,6 @@ public class uzduotis31 {
 
     void Rikiavimas(int[] mas) {
         int keitimas;
-
         for (int i = 0; i < mas.length - 1; i++) {
             for (int j = 0; j < mas.length - i - 1; j++) {
                 if (mas[j] < mas[j + 1]) {

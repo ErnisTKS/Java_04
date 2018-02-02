@@ -10,7 +10,7 @@ public class uzduotis30 {
         int a = sc.nextInt();
         int[] mas = new int[a];
         for (int i = 0; i < a; i++) {
-            System.out.println("Iveskite " + i + " vietoje esanti skaiciu: ");
+            System.out.println("Iveskite " + (i+1) + " vietoje esanti skaiciu: ");
             mas[i] = sc.nextInt();
         }
         Rikiavimas(mas);

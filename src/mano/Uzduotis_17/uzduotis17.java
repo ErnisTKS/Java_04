@@ -7,36 +7,32 @@ public class uzduotis17 {
     public uzduotis17() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Iveskite zodi: ");
-        String a = sc.nextLine();
-        String zodis = a.replaceAll("\\s", "");
-        int ats = arPol(zodis);
-        if (ats == 1) {
-            System.out.println("zodis yra polindromas");
-        } else {
-            System.out.println("zodis nera polindromas");
-        }
+        String zodis = sc.nextLine();
+        char[] raides = zodis.toCharArray();
+        if (arPol(raides) == true) {
+            System.out.println("Sis zodis yra polindromas");
+        } else System.out.println("Sis zodis nera polindromas");
     }
 
-    int arPol(String zodis) {
-        String zodisAtbulai = new StringBuffer(zodis).reverse().toString();
-        System.out.println("====================" + zodis);
-        System.out.println("++++++++++++++++++++" + zodisAtbulai);
-   /*     if (zodis == zodisAtbulai) {
-            return 1;
-        } else if (zodis != zodisAtbulai) {
-            return 0;
-        }
-*/
-        char[] raides = zodis.toCharArray();
-        char[] raides2 = zodisAtbulai.toCharArray();
-        int sutampa = 0;
-        for (int i = 0; i < zodis.length()-1; i++) {
-            if (raides[i] == raides2[i]) {
-                sutampa++;
+    public static boolean arPol(char[] zodis) {
+        boolean palindromas = false;
+        if (zodis.length % 2 == 0) {
+            for (int i = 0; i < zodis.length / 2 - 1; i++) {
+                if (zodis[i] != zodis[zodis.length - i - 1]) {
+                    return false;
+                } else {
+                    palindromas = true;
+                }
+            }
+        } else {
+            for (int i = 0; i < (zodis.length - 1) / 2 - 1; i++) {
+                if (zodis[i] != zodis[zodis.length - i - 1]) {
+                    return false;
+                } else {
+                    palindromas = true;
+                }
             }
         }
-        if (sutampa==zodis.length()){
-            return 1;
-        } else return 0;
+        return palindromas;
     }
 }
